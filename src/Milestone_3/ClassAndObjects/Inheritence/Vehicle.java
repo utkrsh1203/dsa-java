@@ -1,6 +1,6 @@
 package Milestone_3.ClassAndObjects.Inheritence;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String color;
     int maxSpeed;
 
@@ -25,4 +25,8 @@ public class Vehicle {
     public void print() {
         System.out.println("Vehicle" + "color" + color);
     }
+
+    public abstract boolean isMotorised();
+
+    public abstract String getCompany();
 }
