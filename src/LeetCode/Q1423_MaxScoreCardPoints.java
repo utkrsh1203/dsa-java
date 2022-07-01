@@ -1,6 +1,6 @@
 package LeetCode;
 
-public class Q1423 {
+public class Q1423_MaxScoreCardPoints {
 
     public static int maxScore(int[] cardPoints, int k) {
         if (k == 0) {

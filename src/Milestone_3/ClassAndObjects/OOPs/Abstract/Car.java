@@ -1,12 +1,12 @@
-package Milestone_3.ClassAndObjects.Inheritence;
+package Milestone_3.ClassAndObjects.OOPs.Abstract;
 
-public abstract class Car extends Vehicle {
+public class Car extends Vehicle {
 
     int numDoors;
     int numGears;
 
     public Car() {
-        // super(100);
+        super(100);
         System.out.println("Car's Constructor");
         numDoors = 4;
         numGears = 5;
@@ -20,7 +20,7 @@ public abstract class Car extends Vehicle {
 
     public void print() {
         super.print();
-        System.out.println("Car numDoors " + numDoors + "maxSpeed " + maxSpeed);
+        System.out.println("Car numDoors " + numDoors + " maxSpeed " + maxSpeed);
     }
 
     public void printMaxSpeed() {

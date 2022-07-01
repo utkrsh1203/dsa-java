@@ -1,16 +1,16 @@
-package Milestone_3.ClassAndObjects.Inheritence;
+package Milestone_3.ClassAndObjects.OOPs.Abstract;
 
-public abstract class Vehicle {
+public class Vehicle {
     private String color;
     int maxSpeed;
 
     public Vehicle() {
-        System.out.println("Vehicle's Constructor");
+        System.out.println("Vehicle's Constructor 1");
         maxSpeed = 60;
     }
 
     public Vehicle(int maxSpeed) {
-        System.out.println("Vehicle's Constructor");
+        System.out.println("Vehicle's Constructor 2");
         this.maxSpeed = maxSpeed;
     }
 
@@ -23,10 +23,7 @@ public abstract class Vehicle {
     }
 
     public void print() {
-        System.out.println("Vehicle" + "color" + color);
+        System.out.println("Vehicle" + " color " + color);
     }
 
-    public abstract boolean isMotorised();
-
-    public abstract String getCompany();
 }
