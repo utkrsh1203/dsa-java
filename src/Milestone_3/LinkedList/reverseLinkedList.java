@@ -1,10 +1,5 @@
 package Milestone_3.LinkedList;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
-
 class LinkedListNode<T> {
     T data;
     LinkedListNode<T> next;
@@ -41,7 +36,7 @@ public class reverseLinkedList {
         return temp;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         LinkedListNode<Integer> a1 = new LinkedListNode<>(1);
         LinkedListNode<Integer> a2 = new LinkedListNode<>(2);
         System.out.println(a1.next);
