@@ -4,56 +4,58 @@ import java.util.*;
 
 public class TakeInput extends PrintTree {
     public static TreeNode<Integer> takeInputRecursively(TreeNode<Integer> root, boolean isRoot) {
-        Scanner sc = new Scanner(System.in);
-        if (!isRoot) {
-            System.out.println("Enter the root data");
-            int rootData = sc.nextInt();
-            root = new TreeNode<Integer>(rootData);
-        }
+        try (Scanner sc = new Scanner(System.in)) {
+            if (!isRoot) {
+                System.out.println("Enter the root data");
+                int rootData = sc.nextInt();
+                root = new TreeNode<Integer>(rootData);
+            }
 
-        System.out.println("Enter the number of children of " + root.data);
-        int n = sc.nextInt();
-        ArrayList<TreeNode<Integer>> children = new ArrayList<>();
+            System.out.println("Enter the number of children of " + root.data);
+            int n = sc.nextInt();
+            ArrayList<TreeNode<Integer>> children = new ArrayList<>();
 
-        for (int i = 0; i < n; i++) {
-            System.out.println("Enter child " + (i + 1) + " of " + root.data);
-            int x = sc.nextInt();
-            TreeNode<Integer> child = new TreeNode<Integer>(x);
-            takeInputRecursively(child, true);
-            children.add(child);
+            for (int i = 0; i < n; i++) {
+                System.out.println("Enter child " + (i + 1) + " of " + root.data);
+                int x = sc.nextInt();
+                TreeNode<Integer> child = new TreeNode<Integer>(x);
+                takeInputRecursively(child, true);
+                children.add(child);
+            }
+            root.children = children;
         }
-        root.children = children;
         return root;
     }
 
     public static TreeNode<Integer> takeInputLevelWise() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the root data");
-        int rootData = sc.nextInt();
-        TreeNode<Integer> root = new TreeNode<Integer>(rootData);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("Enter the root data");
+            int rootData = sc.nextInt();
+            TreeNode<Integer> root = new TreeNode<Integer>(rootData);
 
-        Queue<TreeNode<Integer>> q = new LinkedList<>();
+            Queue<TreeNode<Integer>> q = new LinkedList<>();
 
-        q.add(root);
+            q.add(root);
 
-        while (!q.isEmpty()) {
-            TreeNode<Integer> curr = q.poll();
-            System.out.println("Enter the no. of children of " + curr.data);
-            ArrayList<TreeNode<Integer>> children = new ArrayList<>();
+            while (!q.isEmpty()) {
+                TreeNode<Integer> curr = q.poll();
+                System.out.println("Enter the no. of children of " + curr.data);
+                ArrayList<TreeNode<Integer>> children = new ArrayList<>();
 
-            int n = sc.nextInt();
+                int n = sc.nextInt();
 
-            for (int i = 0; i < n; i++) {
-                System.out.println("Enter child " + (i + 1) + " of " + curr.data);
-                int x = sc.nextInt();
-                TreeNode<Integer> child = new TreeNode<Integer>(x);
-                children.add(child);
-                q.add(child);
+                for (int i = 0; i < n; i++) {
+                    System.out.println("Enter child " + (i + 1) + " of " + curr.data);
+                    int x = sc.nextInt();
+                    TreeNode<Integer> child = new TreeNode<Integer>(x);
+                    children.add(child);
+                    q.add(child);
+                }
+                curr.children = children;
             }
-            curr.children = children;
-        }
 
-        return root;
+            return root;
+        }
     }
 
     public static void main(String[] args) {

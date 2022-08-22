@@ -14,7 +14,7 @@ public class StacksUsingArrays {
         top = -1;
     }
 
-    public void push(int element) throws StackOverflowException {
+    public void push(int element) {
         // If stack is full
 
         if (top == arr.length - 1) {
@@ -39,7 +39,7 @@ public class StacksUsingArrays {
         }
     }
 
-    public int pop() throws StackUnderflowException {
+    public int pop() {
         // If stack is empty
 
         // Throw exception
@@ -60,7 +60,7 @@ public class StacksUsingArrays {
         return top + 1;
     }
 
-    public int top() throws StackUnderflowException {
+    public int top() {
 
         // If stack is empty
 
@@ -86,7 +86,7 @@ public class StacksUsingArrays {
         }
     }
 
-    public static void main(String[] args) throws StackOverflowException, StackUnderflowException {
+    public static void main(String[] args) {
         StacksUsingArrays stack = new StacksUsingArrays();
 
         stack.push(2);

@@ -36,54 +36,56 @@ public class inputBinaryTree {
             }
         }
 
-        Scanner s = new Scanner(System.in);
-        int rootData = s.nextInt();
-        // s.close();
-        if (rootData == -1) {
-            return null;
+        try (Scanner s = new Scanner(System.in)) {
+            int rootData = s.nextInt();
+            // s.close();
+            if (rootData == -1) {
+                return null;
+            }
+
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
+
+            BinaryTreeNode<Integer> leftChild = treeInputDetailed(false, rootData, true);
+            BinaryTreeNode<Integer> rightChild = treeInputDetailed(false, rootData, false);
+
+            root.left = leftChild;
+            root.right = rightChild;
+
+            return root;
         }
-
-        BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
-
-        BinaryTreeNode<Integer> leftChild = treeInputDetailed(false, rootData, true);
-        BinaryTreeNode<Integer> rightChild = treeInputDetailed(false, rootData, false);
-
-        root.left = leftChild;
-        root.right = rightChild;
-
-        return root;
     }
 
     public static BinaryTreeNode<Integer> takeinputLevelWise() {
-        Scanner s = new Scanner(System.in);
-        int rootData = s.nextInt();
+        try (Scanner s = new Scanner(System.in)) {
+            int rootData = s.nextInt();
 
-        if (rootData == -1)
-            return null;
+            if (rootData == -1)
+                return null;
 
-        BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
-        Queue<BinaryTreeNode<Integer>> pendingChildren = new LinkedList<BinaryTreeNode<Integer>>();
-        pendingChildren.add(root);
+            BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(rootData);
+            Queue<BinaryTreeNode<Integer>> pendingChildren = new LinkedList<BinaryTreeNode<Integer>>();
+            pendingChildren.add(root);
 
-        while (!pendingChildren.isEmpty()) {
-            BinaryTreeNode<Integer> front = pendingChildren.poll();
-            System.out.println("Enter left child of " + front.data);
-            int left = s.nextInt();
-            if (left != -1) {
-                BinaryTreeNode<Integer> leftChild = new BinaryTreeNode<Integer>(left);
-                front.left = leftChild;
-                pendingChildren.add(leftChild);
+            while (!pendingChildren.isEmpty()) {
+                BinaryTreeNode<Integer> front = pendingChildren.poll();
+                System.out.println("Enter left child of " + front.data);
+                int left = s.nextInt();
+                if (left != -1) {
+                    BinaryTreeNode<Integer> leftChild = new BinaryTreeNode<Integer>(left);
+                    front.left = leftChild;
+                    pendingChildren.add(leftChild);
+                }
+
+                System.out.println("Enter right child of " + front.data);
+                int right = s.nextInt();
+                if (right != -1) {
+                    BinaryTreeNode<Integer> rightChild = new BinaryTreeNode<Integer>(right);
+                    front.right = rightChild;
+                    pendingChildren.add(rightChild);
+                }
             }
-
-            System.out.println("Enter right child of " + front.data);
-            int right = s.nextInt();
-            if (right != -1) {
-                BinaryTreeNode<Integer> rightChild = new BinaryTreeNode<Integer>(right);
-                front.right = rightChild;
-                pendingChildren.add(rightChild);
-            }
+            return root;
         }
-        return root;
     }
 
 }

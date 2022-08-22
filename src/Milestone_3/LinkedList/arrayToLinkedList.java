@@ -1,15 +1,15 @@
 package Milestone_3.LinkedList;
 
 public class arrayToLinkedList {
-    public static Node<Integer> convertArrayToList(int[] input) {
-        Node<Integer> head = null;
-        Node<Integer> ln = null;
+    public static LinkedListNode<Integer> convertArrayToList(int[] input) {
+        LinkedListNode<Integer> head = null;
+        LinkedListNode<Integer> ln = null;
         for (int value : input) {
             if (head == null) {
-                head = new Node<Integer>(input[0]);
+                head = new LinkedListNode<Integer>(input[0]);
                 ln = head;
             } else {
-                ln.next = new Node<Integer>(value);
+                ln.next = new LinkedListNode<Integer>(value);
                 ln = ln.next;
             }
         }

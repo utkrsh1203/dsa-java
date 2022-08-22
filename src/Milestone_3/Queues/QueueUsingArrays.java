@@ -37,6 +37,7 @@ public class QueueUsingArrays {
         }
         rear = (rear + 1) % data.length;
         data[rear] = elem;
+
         size++;
     }
 
