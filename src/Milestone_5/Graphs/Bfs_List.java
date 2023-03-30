@@ -2,7 +2,7 @@ package Milestone_5.Graphs;
 
 import java.util.*;
 
-public class BFS {
+public class Bfs_List {
     public static ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
         Queue<Integer> q = new LinkedList<>();

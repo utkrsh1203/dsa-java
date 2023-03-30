@@ -2,7 +2,7 @@ package Milestone_5.Graphs;
 
 import java.util.*;
 
-public class DFS {
+public class Dfs_List {
     public static ArrayList<Integer> dfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         // Code here
         boolean visited[] = new boolean[V];

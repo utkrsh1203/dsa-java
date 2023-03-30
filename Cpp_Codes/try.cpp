@@ -1,20 +1,32 @@
 #include <iostream>
 using namespace std;
 
+int Pivot(int arr[], int n)
+{
+    int s = 0;
+    int e = n - 1;
+    int mid = s + (e - s) / 2;
+
+    while (s < e)
+    {
+        if (arr[mid] >= arr[0])
+        {
+            s = mid + 1;
+        }
+        else
+        {
+            e = mid;
+        }
+        mid = s + (e - s) / 2;
+    }
+    return e;
+}
+
 int main()
 {
-    int S;
-    cin >> S;
-    int E;
-    cin >> E;
-    int W;
-    cin >> W;
-    int table;
-    while (S <= E)
-    {
-        table = ((S - 32) * 5) / 9;
-        cout << S << " " << table << endl;
-        S = S + W;
-    }
+    int arr[6] = {12, 23, 34, 1, 3, 5};
+
+    cout << "pivot element is at index :: " << Pivot(arr, 6) << endl;
+
     return 0;
 }
