@@ -15,7 +15,7 @@ public class Solution {
             System.out.println();
             i = i + 1;
         }
-
+        s.close();
     }
 
 }
