@@ -1,4 +1,4 @@
-package Milestone_3.Recursion;
+package Coding_Ninjas.Milestone_3.Recursion;
 
 import java.util.Arrays;
 

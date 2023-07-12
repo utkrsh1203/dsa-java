@@ -1,4 +1,4 @@
-package Milestone_3.TimeComplexity;
+package Coding_Ninjas.Milestone_3.TimeComplexity;
 
 import java.util.*;
 

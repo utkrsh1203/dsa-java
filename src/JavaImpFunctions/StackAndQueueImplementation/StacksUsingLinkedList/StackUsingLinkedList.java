@@ -1,4 +1,4 @@
-package Milestone_3.Stacks.StacksUsingLinkedList;
+package JavaImpFunctions.StackAndQueueImplementation.StacksUsingLinkedList;
 
 class Node {
     int data;

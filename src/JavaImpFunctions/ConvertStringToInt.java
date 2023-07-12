@@ -1,4 +1,4 @@
-package Milestone_3.Recursion;
+package JavaImpFunctions;
 
 public class ConvertStringToInt {
     public static int convertStringToInt(String input) {

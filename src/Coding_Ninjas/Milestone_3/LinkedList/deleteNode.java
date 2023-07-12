@@ -1,13 +1,13 @@
 package Coding_Ninjas.Milestone_3.LinkedList;
 
-class LinkedListNode<T> {
-    T data;
-    LinkedListNode<T> next;
+// class LinkedListNode<T> {
+//     T data;
+//     LinkedListNode<T> next;
 
-    public LinkedListNode(T data) {
-        this.data = data;
-    }
-}
+//     public LinkedListNode(T data) {
+//         this.data = data;
+//     }
+// }
 
 public class deleteNode {
     public static LinkedListNode<Integer> delete(LinkedListNode<Integer> head, int pos) {

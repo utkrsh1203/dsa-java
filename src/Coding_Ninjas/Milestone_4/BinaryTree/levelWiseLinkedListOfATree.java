@@ -3,15 +3,15 @@ package Coding_Ninjas.Milestone_4.BinaryTree;
 import java.util.ArrayList;
 import java.util.*;
 
-class BinaryTreeNode<T> {
-    T data;
-    BinaryTreeNode<T> left;
-    BinaryTreeNode<T> right;
+// class BinaryTreeNode<T> {
+//     T data;
+//     BinaryTreeNode<T> left;
+//     BinaryTreeNode<T> right;
 
-    public BinaryTreeNode(T data) {
-        this.data = data;
-    }
-}
+//     public BinaryTreeNode(T data) {
+//         this.data = data;
+//     }
+// }
 
 class LinkedListNode<T> {
     T data;

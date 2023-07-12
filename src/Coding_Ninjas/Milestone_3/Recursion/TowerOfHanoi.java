@@ -1,4 +1,4 @@
-package Milestone_3.Recursion;
+package Coding_Ninjas.Milestone_3.Recursion;
 
 public class TowerOfHanoi {
     public static void towerOfHanoi(int disks, char source, char auxiliary, char destination) {

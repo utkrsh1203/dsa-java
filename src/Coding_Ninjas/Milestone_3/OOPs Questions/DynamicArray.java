@@ -1,4 +1,3 @@
-package Milestone_3.OOPs;
 
 class Array {
     private int data[];

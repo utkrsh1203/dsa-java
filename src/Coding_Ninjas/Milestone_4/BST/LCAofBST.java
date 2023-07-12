@@ -1,16 +1,16 @@
 package Coding_Ninjas.Milestone_4.BST;
 
-class BinaryTreeNode<T> {
+// class BinaryTreeNode<T> {
 
-    public T data;
-    public BinaryTreeNode<T> left;
-    public BinaryTreeNode<T> right;
+//     public T data;
+//     public BinaryTreeNode<T> left;
+//     public BinaryTreeNode<T> right;
 
-    public BinaryTreeNode(T data) {
-        this.data = data;
-    }
+//     public BinaryTreeNode(T data) {
+//         this.data = data;
+//     }
 
-}
+// }
 
 public class LCAofBST {
     public static int getLCA(BinaryTreeNode<Integer> root, int a, int b) {

@@ -1,4 +1,4 @@
-package Milestone_3.Stacks.StacksUsingArray;
+package JavaImpFunctions.StackAndQueueImplementation.StacksUsingArray;
 
 public class StacksUsingArrays {
     private int arr[];

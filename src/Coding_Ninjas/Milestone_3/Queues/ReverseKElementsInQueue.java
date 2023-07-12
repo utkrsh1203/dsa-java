@@ -1,4 +1,4 @@
-package Milestone_3.Queues;
+package Coding_Ninjas.Milestone_3.Queues;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package Milestone_3.Recursion;
+package Coding_Ninjas.Milestone_3.Recursion;
 
 public class MergeSort {
 
@@ -6,9 +6,6 @@ public class MergeSort {
         int i = 0, j = 0, k = s;
 
         while (i < arr1.length && j < arr2.length) {
-            if (i >= arr1.length) {
-
-            }
             if (arr1[i] <= arr2[j]) {
                 arr[k] = arr1[i];
                 k++;
@@ -19,18 +16,15 @@ public class MergeSort {
                 j++;
             }
         }
-        if (i == arr1.length) {
-            while (j < arr2.length) {
-                arr[k] = arr2[j];
-                j++;
-                k++;
-            }
-        } else {
-            while (i < arr1.length) {
-                arr[k] = arr1[i];
-                i++;
-                k++;
-            }
+        while (j < arr2.length) {
+            arr[k] = arr2[j];
+            j++;
+            k++;
+        }
+        while (i < arr1.length) {
+            arr[k] = arr1[i];
+            i++;
+            k++;
         }
     }
 

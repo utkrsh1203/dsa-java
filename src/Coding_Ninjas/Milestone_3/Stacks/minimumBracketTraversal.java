@@ -1,4 +1,4 @@
-package Milestone_3.Stacks;
+package Coding_Ninjas.Milestone_3.Stacks;
 
 import java.util.*;
 

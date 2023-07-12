@@ -1,4 +1,4 @@
-package Milestone_3.Queues;
+package JavaImpFunctions.StackAndQueueImplementation;
 
 import java.util.*;
 
